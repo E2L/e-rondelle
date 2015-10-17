@@ -1,0 +1,146 @@
+\documentclass[francais,a4paper,oneside]{article}
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage[francais]{babel} 
+\usepackage{graphicx}
+\usepackage{lscape}
+\usepackage{url}
+\usepackage{amssymb}
+\usepackage{multicol}
+\usepackage{amsmath}
+\usepackage{listings}
+\usepackage[svgnames,dvipsnames]{xcolor}
+\usepackage{lastpage}
+\usepackage{babel}
+\usepackage{eurosym}
+\usepackage{lettrine}
+\usepackage{fancyhdr}
+\usepackage{setspace}
+\usepackage{lmodern}
+%\usepackage{sectsty}
+%\usepackage[12pt]{extsizes}
+\usepackage{listings}
+%\usepackage[squaren,Gray]{SIunits}
+
+%\areaset{250mm}{155mm}
+%%%% debut macro %%%%
+\newenvironment{changemargin}[2]{\begin{list}{}{%
+\setlength{\topsep}{0pt}%
+\setlength{\leftmargin}{0pt}%
+\setlength{\rightmargin}{0pt}%
+\setlength{\listparindent}{\parindent}%
+\setlength{\itemindent}{\parindent}%
+\setlength{\parsep}{0pt plus 1pt}%
+\addtolength{\leftmargin}{#1}%
+\addtolength{\rightmargin}{#2}%
+}\item }{\end{list}}
+%%%% fin macro %%%%
+
+
+\usepackage[a4paper]{geometry}
+\geometry{hscale=0.75,vscale=0.8,}
+\geometry{margin={8mm,8mm}}
+\geometry{vmargin={3mm,16mm}}
+\makeatletter
+\newcommand{\noun}[1]{\textsc{#1}}
+\setlength{\parindent}{20pt}
+\setlength{\parskip}{1ex plus 0.5ex minus 0.2ex}
+
+\newcommand\largE{\@setfontsize\large{16}{20}} 
+
+
+%---SORTIES--------------------------------------------------------------------
+
+\usepackage[
+pdftex,                    % Paramétrage de la navigation
+bookmarks = true,          % Signets
+bookmarksnumbered = true,  % Signets numérotés
+pdfpagemode = None,        % None, UseThumbs, UseOutlines, Fullscreen
+pdfstartview = FitH,       % FitH, FitV, FitR, FitB, FitBH, FitBV, Fit
+pdfpagelayout = OneColumn, % SinglePage, OneColumn, TwoColumnLeft, TwoColumnRight
+colorlinks = true,         % Liens en couleur
+urlcolor = blue,           % Couleur des liens externes
+pdfborder = {0 0 0}        % Style de bordure : ici, rien
+]{hyperref}
+
+\hypersetup{                                     
+pdfauthor = {Thomas PABST},% Auteurs
+pdftitle = {Le messager de l'E2L qui annonce toute l'année le printemps numérique}, % Titre du document
+pdfsubject = {Actualités du libre},    % Sujet
+pdfkeywords = {latex,pdf,e2l,E2L, e-rondelle}, % Mots-clefs
+pdfcreator = {vim},                            % Logiciel qui a crée le document
+pdfproducer = {Patrick Foubet},                % Société avec produit le logiciel
+plainpages = true}
+\usepackage{pdfpages}
+
+
+%print Mode or pdfMode
+
+%---EN-TETE-ET-PIED-DE-PAGE----------------------------------------------------
+\pagestyle{fancy}
+
+\renewcommand{\footrulewidth}{0.5pt}
+\fancyfoot[C]{\textbf{\textit{Page \thepage}}}
+\fancyfoot[L]{\textbf{\textit{L'e-Rondelle, Bulletin de l'E2L}}}
+\fancyfoot[R]{\textbf{\textit{Numéro 1 du 05 septembre 2015}}}
+
+\begin{document}
+\begin{spacing}{1.2}
+
+\begin{center}
+\includegraphics[scale=1.0]{pictures/logo-eRondelle.png}\\
+\end{center}
+
+\vspace{-3.5cm}
+
+\begin{center}
+    \textbf{\textit{\color{blue}
+    Le messager de l'E2L qui annonce toute l'année le printemps numérique}}
+    \begin{spacing}{1.0}
+\vspace{0.2cm}
+    \footnotesize{\textbf{
+        Bulletin apériodique de l'Ecole du Logiciel Libre\\
+        79 avenue Danielle Casanova - 94200 Ivry-sur-Seine\\
+        www.e2l.org - Directeur de la Publiction~: Patrick Foubet}}
+    \end{spacing}
+\end{center}
+
+\vspace{-0.8cm}
+\begin{changemargin}{0.8cm}{0.0cm}
+    \Huge{\color{RoyalBlue}\textbf{Editorial} \color{black}\large{\textbf{Par Albert Camus}}}
+\vspace*{0.1cm}
+
+\normalsize{}
+\textbf{\textit{Le monde est ce qu'il est, c'est-à-dire peu de chose. C'est ce que
+    chacun sait depuis hier grâce au formidable concert que la radio, les
+    journaux et les agences d'information viennent de déclencher au sujet de la
+    bombe atomique.}}
+\end{changemargin}
+
+\vspace*{-0.1cm}
+
+\fcolorbox{RoyalBlue}{Lavender}{
+\begin{minipage}[c][19cm][t]{0.26\linewidth}
+    \vspace*{0.4cm}
+    \begin{center}
+        \Huge{\color{RoyalBlue}\textbf{Sommaire}}
+    \end{center}
+    \input{sommaire.tex}
+    \vspace*{0.4cm}
+    \begin{center}
+        \includegraphics[scale=1.0]{pictures/logo-eRondelle2.png}\\
+    \end{center}
+
+\end{minipage}
+}\hfill
+\begin{minipage}[c][20cm][t]{0.64\linewidth}
+    \input{article1.tex}
+\end{minipage}
+\end{spacing}
+
+
+\begin{spacing}{1.2}
+\vspace*{0.1cm}
+\input{article2.tex}
+\end{spacing}
+\end{document}
